@@ -2,7 +2,7 @@ import re
 import tweepy 
 from textblob import TextBlob 
 from tweepy import OAuthHandler 
-from twython import Twython
+# from twython import Twython
 
   
 class TwitterClient(object): 
@@ -55,7 +55,7 @@ class TwitterClient(object):
   
 def main(): 
     api = TwitterClient()  
-    tweets = api.get_tweets(query = '#Celtics', count = 100) 
+    tweets = api.get_tweets(query = '#WeTheNorth', count = 200) 
   
     ptweets = [tweet for tweet in tweets if tweet['sentiment'] == 'positive'] 
     print("Positive tweets percentage: {} %".format(100*len(ptweets)/len(tweets)))  
